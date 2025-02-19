@@ -8,10 +8,7 @@ $PWD/install.sh -a -d $PWD/release # Build
 
 cd $ROOT/release; tar -cJf $ROOT/Win11-all.tar.xz *; # Compress all
 
-for DIRECTORY in *; do 
-    tar -cJf $DIRECTORY.tar.xz $DIRECTORY; 
-    rm -rf $DIRECTORY
-done # Compress one 
+for DIRECTORY in *; do tar -cJf $DIRECTORY.tar.xz $DIRECTORY; done # Compress one 
 
 mv $ROOT/Win11-all.tar.xz $ROOT/release 
 
